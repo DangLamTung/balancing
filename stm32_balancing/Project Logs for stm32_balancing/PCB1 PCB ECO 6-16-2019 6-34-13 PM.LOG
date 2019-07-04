@@ -1,0 +1,6 @@
+Added Component: Designator=Cbu(CAP-SM-0603)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Value"; Value = "100nF"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=Cbu-1
+Added Pin To Net: NetName=5v Pin=Cbu-2
+Added Member To Class: ClassName=Sheet1 Member=Component Cbu Cap Non-Pol SMD

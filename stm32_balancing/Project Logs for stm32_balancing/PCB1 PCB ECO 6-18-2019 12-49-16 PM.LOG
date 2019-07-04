@@ -1,0 +1,4 @@
+Change Component DesignItemId : Designator=2 Old DesignItemId=BLUE_PILL New DesignItemId=
+Change Component Footprint: Designator=2 Old Footprint=BLUE_PILL New Footprint=BLUE_PILL_ADV
+Change Component Library : Designator=2 Old Library=BluePill.IntLib New Library=CR1220.intlib
+Added Member To Class: ClassName=Sheet1 Member=Component 2 BLUE_PILL

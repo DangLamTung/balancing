@@ -1,0 +1,6 @@
+Change Component Designator: OldDesignator=P? NewDesignator=MPU
+Change Component Designator: OldDesignator=P? NewDesignator=UART
+Added Component: Designator=*(PCBComponent_1)
+Add component. Clean all parameters for all variants
+Added Member To Class: ClassName=Sheet1 Member=Component * GPS
+Added Member To Class: ClassName=Sheet1 Member=Component UART Header 4

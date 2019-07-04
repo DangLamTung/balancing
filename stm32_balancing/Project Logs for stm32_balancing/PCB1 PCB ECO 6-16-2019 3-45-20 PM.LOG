@@ -1,0 +1,4 @@
+Added Component: Designator=*(PCBComponent_1)
+Add component. Clean all parameters for all variants
+Added Pin To Net: NetName=TX2 Pin=*-13
+Added Pin To Net: NetName=RX2 Pin=*-14

@@ -1,0 +1,9 @@
+Added Component: Designator=?(BLUE_PILL)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "DeviceName"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DeviceSetName"; Value = "BLUE_PILL"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "GateName_1"; Value = "G$1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LibraryName"; Value = "BluePill"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "BLUE_PILL"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SymbolName_1"; Value = "BLUE_PILL"; VariantName = "[No Variations]"
+Added Class: Name=Sheet1

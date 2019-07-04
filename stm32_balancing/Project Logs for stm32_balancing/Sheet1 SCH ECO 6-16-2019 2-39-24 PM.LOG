@@ -1,0 +1,6 @@
+Remove Pin=?-P$6 From Net=TX1
+Remove Pin=?-P$7 From Net=RX1
+Remove Pin=?-P$15 From Net=SDA1
+Remove Pin=?-P$16 From Net=SCL1
+Remove Pin=?-P$33 From Net=RX2
+Remove Pin=?-P$34 From Net=TX2

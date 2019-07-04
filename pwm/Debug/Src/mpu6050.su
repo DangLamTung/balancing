@@ -1,0 +1,6 @@
+mpu6050.c:28:8:ftoa	56	static
+mpu6050.c:117:6:init_MPU	56	static
+mpu6050.c:156:14:read_MPU	72	static
+mpu6050.c:179:6:process_MPU	128	static
+mpu6050.c:243:6:complementary_filter	32	static
+mpu6050.c:246:6:calibration	8	static

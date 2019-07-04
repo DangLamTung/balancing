@@ -1,0 +1,12 @@
+Removed Member From Class: ClassName=Sheet1 Member=*?
+Added Component: Designator=*(PCBComponent_1)
+Add component. Clean all parameters for all variants
+Added Pin To Net: NetName=TX1 Pin=?-P$6
+Added Pin To Net: NetName=RX1 Pin=?-P$7
+Added Pin To Net: NetName=SDA1 Pin=?-P$15
+Added Pin To Net: NetName=SCL1 Pin=?-P$16
+Added Pin To Net: NetName=RX2 Pin=?-P$33
+Added Net: Name=RX2
+Added Pin To Net: NetName=TX2 Pin=?-P$34
+Added Net: Name=TX2
+Added Member To Class: ClassName=Sheet1 Member=Component * GPS

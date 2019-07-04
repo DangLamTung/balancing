@@ -1,0 +1,11 @@
+Removed Pin From Net: NetName=5v Pin=1-1
+Removed Member From Class: ClassName=Sheet1 Member=1
+Change Component Footprint: Designator=C3 Old Footprint=CAP-SM-0603 New Footprint=CAP-SM-0805
+Change Component Footprint: Designator=C4 Old Footprint=CAP-SM-0603 New Footprint=CAP-SM-0805
+Added Component: Designator=D?(LED-3mm)
+Add component. Clean all parameters for all variants
+Added Pin To Net: NetName=5v Pin=D?-1
+Added Pin To Net: NetName=NetD?_2 Pin=D?-2
+Added Pin To Net: NetName=NetD?_2 Pin=R1-2
+Added Net: Name=NetD?_2
+Added Member To Class: ClassName=Sheet1 Member=Component D? LED

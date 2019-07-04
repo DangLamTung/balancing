@@ -1,0 +1,5 @@
+Removed Pin From Net: NetName=PWM2 Pin=2-P$33
+Removed Pin From Net: NetName=PWM1 Pin=2-P$34
+Added Pin To Net: NetName=PWM1 Pin=2-P$33
+Added Pin To Net: NetName=PWM2 Pin=2-P$34
+Added Member To Class: ClassName=Sheet1 Member=Component 2 BLUE_PILL

@@ -1,0 +1,4 @@
+Added Pin To Net: NetName=RX2 Pin=?-P$35
+Added Net: Name=RX2
+Added Pin To Net: NetName=TX2 Pin=?-P$34
+Added Net: Name=TX2

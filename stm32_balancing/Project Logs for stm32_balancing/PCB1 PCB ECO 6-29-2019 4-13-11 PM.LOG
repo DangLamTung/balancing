@@ -1,0 +1,16 @@
+Removed Pin From Net: NetName=5v Pin=C2-1
+Removed Pin From Net: NetName=GND Pin=C2-2
+Removed Pin From Net: NetName=9v Pin=P?-2
+Removed Member From Class: ClassName=Sheet1 Member=C2
+Added Component: Designator=D1(D1A)
+Add component. Clean all parameters for all variants
+Added Component: Designator=D2(D1A)
+Add component. Clean all parameters for all variants
+Added Pin To Net: NetName=9v Pin=D1-2
+Added Pin To Net: NetName=5v Pin=D2-1
+Added Pin To Net: NetName=9v Pin=D2-2
+Added Pin To Net: NetName=NetD1_1 Pin=D1-1
+Added Pin To Net: NetName=NetD1_1 Pin=P?-2
+Added Net: Name=NetD1_1
+Added Member To Class: ClassName=Sheet1 Member=Component D1 Diode
+Added Member To Class: ClassName=Sheet1 Member=Component D2 Diode

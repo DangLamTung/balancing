@@ -1,0 +1,11 @@
+Change Component Footprint: Designator=C1 Old Footprint=CP1.5/3.4 New Footprint=CP1/2.5
+Change Component Footprint: Designator=C2 Old Footprint=CP1.5/3.4 New Footprint=CP1/2.5
+Added Pin To Net: NetName=GND Pin=2-P$6
+Added Pin To Net: NetName=GND Pin=2-P$7
+Added Pin To Net: NetName=GND Pin=P4-3
+Added Pin To Net: NetName=GND Pin=P4-4
+Change Net Name : Old Net Name=GND New Net Name=RX1
+Added Member To Class: ClassName=Sheet1 Member=Component C1 Cap Pol
+Added Member To Class: ClassName=Sheet1 Member=Component C2 Cap Pol
+Added Member To Class: ClassName=Sheet1 Member=Component C3 Cap Non-Pol SMD
+Added Member To Class: ClassName=Sheet1 Member=Component C4 Cap Non-Pol SMD

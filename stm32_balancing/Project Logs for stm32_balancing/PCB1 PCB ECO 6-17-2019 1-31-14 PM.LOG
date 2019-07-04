@@ -1,0 +1,17 @@
+Added Member To Class: ClassName=Sheet1 Member=Component *1 Component_1
+Added Member To Class: ClassName=Sheet1 Member=Component 2 BLUE_PILL
+Added Member To Class: ClassName=Sheet1 Member=Component C1 Cap Pol
+Added Member To Class: ClassName=Sheet1 Member=Component C2 Cap Pol
+Added Member To Class: ClassName=Sheet1 Member=Component C3 Cap Non-Pol SMD
+Added Member To Class: ClassName=Sheet1 Member=Component C4 Cap Non-Pol SMD
+Added Member To Class: ClassName=Sheet1 Member=Component C? Cap Non-Pol SMD
+Added Member To Class: ClassName=Sheet1 Member=Component Cbu Cap Non-Pol SMD
+Added Member To Class: ClassName=Sheet1 Member=Component D? LED
+Added Member To Class: ClassName=Sheet1 Member=Component P1 Header 2
+Added Member To Class: ClassName=Sheet1 Member=Component P2 Header 4
+Added Member To Class: ClassName=Sheet1 Member=Component P3 Header 8
+Added Member To Class: ClassName=Sheet1 Member=Component P4 Header 4
+Added Member To Class: ClassName=Sheet1 Member=Component P5 Header 4
+Added Member To Class: ClassName=Sheet1 Member=Component R1 RESISTOR SMD
+Added Member To Class: ClassName=Sheet1 Member=Component U1 74HC245N
+Added Member To Class: ClassName=Sheet1 Member=Component UN1 LM7805

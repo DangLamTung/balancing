@@ -1,0 +1,15 @@
+Added Component: Designator=?(BLUE_PILL)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "DeviceName"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DeviceSetName"; Value = "BLUE_PILL"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "GateName_1"; Value = "G$1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LibraryName"; Value = "BluePill"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "BLUE_PILL"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SymbolName_1"; Value = "BLUE_PILL"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=TX1 Pin=?-P$6
+Added Pin To Net: NetName=RX1 Pin=?-P$7
+Added Pin To Net: NetName=SDA1 Pin=?-P$15
+Added Pin To Net: NetName=SCL1 Pin=?-P$16
+Added Pin To Net: NetName=RX2 Pin=?-P$33
+Added Pin To Net: NetName=TX2 Pin=?-P$34
+Added Member To Class: ClassName=Sheet1 Member=Component ? BLUE_PILL
