@@ -140,6 +140,8 @@ layout_inner = QHBoxLayout()
 layout_inner1 = QHBoxLayout()
 layout_inner2 = QVBoxLayout()
 
+layout_value = QHBoxLayout()
+
 label = QLabel("Kp 1")
 label1 = QLabel("Ki 1")
 label2 = QLabel("Kd 1")
@@ -150,6 +152,9 @@ label5 = QLabel("Kd 2")
 
 label6 = QLabel("Motor 1")
 label7 = QLabel("Motor 2")
+
+label_duty1 = QLabel("Duty 1")
+label_duty2 = QLabel("Duty 2")
 
 connect_button = QPushButton('Connect COM')
 connect_button.clicked.connect(connectCOM)
@@ -220,7 +225,11 @@ layout_inner1.addWidget(button2)
 
 textEdit = QTextEdit()
 
+layout_value.addWidget(label_duty1)
+layout_value.addWidget(label_duty2)
+
 main_layout.addLayout(layout_inner1)
+main_layout.addLayout(layout_value)
 main_layout.addWidget(plot_uart)
 main_layout.addWidget(textEdit)
 
@@ -240,11 +249,15 @@ def update():
     if(plot_control):
         value = ser.readline()                # read line (single value) from the s
     try:
-        Xm[-1] = float(value.decode().replace('\x00',''))                 # vector containing the instantaneous values 
+        X =  (value.decode().replace('\x00','').replace('\x00','')).split(' ')
+        Xm[-1] = float(X[0])                 # vector containing the instantaneous values 
+        label_duty1.setText("Duty 1:" + str(X[1]))
+        label_duty2.setText("Duty 2:" + str(X[2]))
     except Exception as e: 
         print(e)   
         textEdit.setPlainText(str(e) + "\n")
         Xm[-1] = Xm[0]
+    #ser.close()
     ptr += 1                              # update x position for displaying the curve
     curve.setData(Xm)                     # set the curve with this data
     curve.setPos(ptr,0)                   # set x position in the graph to 0

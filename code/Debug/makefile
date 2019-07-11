@@ -52,8 +52,8 @@ pwm.list \
 all: pwm.elf secondary-outputs
 
 # Tool invocations
-pwm.elf: $(OBJS) $(USER_OBJS) D:\STMworkspace\pwm\STM32F103C8TX_FLASH.ld
-	arm-none-eabi-g++ -o "pwm.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"D:\STMworkspace\pwm\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="pwm.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+pwm.elf: $(OBJS) $(USER_OBJS) C:\Users\PC\Desktop\Doc\Balancing\code\STM32F103C8TX_FLASH.ld
+	arm-none-eabi-g++ -o "pwm.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"C:\Users\PC\Desktop\Doc\Balancing\code\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="pwm.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

@@ -7,6 +7,7 @@
 #include "mpu6050.h"
 #include <stdlib.h>
 #include <stdio.h>
+#include "PID.h"
 
 #define MAX_PRECISION	(10)
 #define alpha 0.96
@@ -219,25 +220,13 @@ void process_MPU(){
     ftoa(com_angle, buffer, 2);
     HAL_UART_Transmit(&huart1, buffer, 5, 1000);
     HAL_UART_Transmit(&huart1, &n, 1, 1000);
-//
-//    ftoa(Acc_y, buffer, 2);
-//    HAL_UART_Transmit(&huart1, buffer, 7, 1000);
-//    HAL_UART_Transmit(&huart1, &n, 1, 1000);
-//
-//    ftoa(Acc_z, buffer, 2);
-//    HAL_UART_Transmit(&huart1, buffer, 7, 1000);
-//    HAL_UART_Transmit(&huart1, &n, 1, 1000);
-//
-//    ftoa(Gyro_x, buffer, 2);
-//    HAL_UART_Transmit(&huart1, buffer, 7, 1000);
-//    HAL_UART_Transmit(&huart1, &n, 1, 1000);
-//
-//    ftoa(Gyro_y, buffer, 2);
-//    HAL_UART_Transmit(&huart1, buffer, 7, 1000);
-//    HAL_UART_Transmit(&huart1, &n, 1, 1000);
-//
-//    ftoa(Gyro_z, buffer, 2);
-//    HAL_UART_Transmit(&huart1, buffer, 7, 1000);
+
+    itoa(duty,buffer,10);
+	HAL_UART_Transmit(&huart1, (uint8_t *)buffer, 4, 100);
+	HAL_UART_Transmit(&huart1, &n, 1, 1000);
+
+	itoa(duty_1,buffer,10);
+	HAL_UART_Transmit(&huart1, (uint8_t *)buffer, 4, 100);
     HAL_UART_Transmit(&huart1, &r, 1, 1000);
 }
 void complementary_filter(float angle_acc,float gyro_rate,float dt){

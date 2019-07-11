@@ -45,11 +45,11 @@
 /* Private variables ---------------------------------------------------------*/
 char mode;
 char buffer[4];
-int pid_data[8];
+char msg[20];
+int pid_data[9];
 volatile int i = 0;
 
-volatile int duty = 0;
-volatile int duty_1 = 0;
+
 
 I2C_HandleTypeDef hi2c1;
 
@@ -129,6 +129,7 @@ static void MX_TIM1_Init(void);
 	      if (__HAL_TIM_GET_IT_SOURCE(&htim1,TIM_IT_UPDATE)) {
 	    	 // pre_com_angle = com_angle; // đạo hàm, lúc trước khi lấy mẫu cái hiện tại đã thành cái mới
 	    	  process_MPU();
+
 	    	  duty = PID(0,com_angle);
 	    	  duty_1 = PID_1(0,com_angle);
 	      }
@@ -186,11 +187,10 @@ int main(void)
 	HAL_UART_Receive_IT(&huart1, &mode, 1);
     if(mode == 's'){
     	HAL_TIM_Base_Start_IT(&htim1);
-        while (1)
-        {
-	      PWM_Control_1(duty);
-	      PWM_Control_2(duty_1);
-        }
+
+	    PWM_Control_1(duty);
+	    PWM_Control_2(duty_1);
+
      }
      if(mode == 'c'){
 	     calib_MPU();
@@ -198,19 +198,36 @@ int main(void)
      if(mode == 'p'){
     	 HAL_UART_DeInit(&huart1);
     	 MX_USART1_UART_Init();
-    	 while(1){
-    		 while(i<8){
+    	 strcpy(msg,"enter pid tune");
+    	 HAL_UART_Transmit(&huart1, (uint8_t *)&msg, 25, 100);
+    		 while(i<9){
     	        if(HAL_UART_Receive(&huart1, &buffer, 4, 1000) == HAL_OK){
     	         pid_data[i] = atoi(buffer);
     	         i++;
     	       }
-    		 }
+    	        Kp = (float)pid_data[1]/100.0;
+    	        Ki = (float)pid_data[2]/100.0;
+    	        Kd = (float)pid_data[3]/100.0;
 
-            	 HAL_UART_Receive_IT(&huart1, &mode, 1);
-            	 mode = ' ';
-            	 break;
+    	        Kp1 = (float)pid_data[4]/100.0;
+    	        Ki1 = (float)pid_data[5]/100.0;
+    	        Kd1 = (float)pid_data[6]/100.0;
+
+    	        motor = pid_data[7];
+    	        motor_1 = pid_data[8];
     	 }
-     }
+    		 i = 0;
+    		 mode = ' ';
+             HAL_UART_Receive_IT(&huart1, &mode, 1);
+        }
+        if(mode == 'd'){
+               HAL_UART_Receive_IT(&huart1, &mode, 1);
+               mode = ' ';
+               HAL_TIM_Base_Stop_IT(&htim1);
+       	       PWM_Control_1(0);
+       	       PWM_Control_2(0);
+        }
+
   }
   /* USER CODE END 3 */
 }
@@ -351,9 +368,9 @@ static void MX_TIM2_Init(void)
 
   /* USER CODE END TIM2_Init 1 */
   htim2.Instance = TIM2;
-  htim2.Init.Prescaler = 0;
+  htim2.Init.Prescaler = 3;
   htim2.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim2.Init.Period = 7199;
+  htim2.Init.Period = 1000;
   htim2.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   htim2.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
   if (HAL_TIM_PWM_Init(&htim2) != HAL_OK)

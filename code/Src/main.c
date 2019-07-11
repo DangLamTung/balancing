@@ -86,28 +86,24 @@ static void MX_TIM1_Init(void);
 		  HAL_GPIO_WritePin(GPIOB,GPIO_PIN_10,GPIO_PIN_RESET);
 		  HAL_GPIO_WritePin(GPIOB,GPIO_PIN_11,GPIO_PIN_SET);
 		}
-		 if(duty < 800)
+
 		  __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_3, duty);
-		else
-	      __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_3, 800);
 
 	}
 
 	void PWM_Control_2(int duty){
 		if(duty > 0){
-			  HAL_GPIO_WritePin(GPIOB,GPIO_PIN_1,GPIO_PIN_RESET);
-			  HAL_GPIO_WritePin(GPIOB,GPIO_PIN_0,GPIO_PIN_SET);
+			  HAL_GPIO_WritePin(GPIOB,GPIO_PIN_1,GPIO_PIN_SET);
+			  HAL_GPIO_WritePin(GPIOB,GPIO_PIN_0,GPIO_PIN_RESET);
 
 		}
 		else{
 	      duty = -duty;
-		  HAL_GPIO_WritePin(GPIOB,GPIO_PIN_1,GPIO_PIN_SET);
-		  HAL_GPIO_WritePin(GPIOB,GPIO_PIN_0,GPIO_PIN_RESET);
+		  HAL_GPIO_WritePin(GPIOB,GPIO_PIN_1,GPIO_PIN_RESET);
+		  HAL_GPIO_WritePin(GPIOB,GPIO_PIN_0,GPIO_PIN_SET);
 		}
-		 if(duty < 850)
-				  			  __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_4, duty + 50);
-				                else
-				              	  __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_4, 850);
+		__HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_4, duty + 50);
+
 
 	}
 

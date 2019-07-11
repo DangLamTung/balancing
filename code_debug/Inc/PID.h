@@ -1,6 +1,7 @@
 #ifndef PID_H_
 #define PID_H_
 
+#include <stdio.h>
 float Kp, Ki, Kd;
 float Kp1, Ki1, Kd1;
 float dt;
@@ -24,4 +25,8 @@ volatile float err_1_1;
 volatile float err_2_1;
 int PID(float setpoint, float input);
 
+volatile int duty;
+volatile int duty_1;
+
+int motor, motor_1;
 #endif

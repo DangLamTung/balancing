@@ -46,10 +46,10 @@ int PID_1(float setpoint, float input){
 
 
     if(PID_value1 > 0){
-       out = PID_value1 + 560;
+       out = PID_value1 + 575;
     }
     if(PID_value1 < 0){
-       out = PID_value1 - 560;
+       out = PID_value1 - 575;
     }
     return out;
 }
